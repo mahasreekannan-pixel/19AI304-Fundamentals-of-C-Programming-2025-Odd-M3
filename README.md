@@ -29,6 +29,7 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 # Program:
 
 #include <stdio.h>
+
 int main(){
     int decimal, binary[32];
     int i = 0;
@@ -37,15 +38,18 @@ int main(){
         printf("Binary equivalent: 0\n");
         return 0;
     }
+    
     while (decimal > 0){
         binary[i] = decimal % 2;
         decimal = decimal / 2;
         i++;
     }
+    
     printf("Binary equivalent: ");
     for (int j = i - 1; j >= 0; j--){
         printf("%d", binary[j]);
     }
+    
     printf("\n");
     return 0;
 }
