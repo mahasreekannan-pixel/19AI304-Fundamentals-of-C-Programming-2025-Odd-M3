@@ -108,11 +108,13 @@ int main(){
     int found = 0;
     scanf("%d %d", &r, &c);
     printf("Enter the matrix elements:\n");
+    
     for (i = 0; i < r; i++){
         for (j = 0; j < c; j++){
             scanf("%d", &a[i][j]);
         }
     }
+    
     for (i = 0; i < r; i++){
         min = a[i][0];
         colIndex = 0;
@@ -123,10 +125,12 @@ int main(){
                 colIndex = j;
             }
         }
+        
         for (k = 0; k < r; k++){
             if (a[k][colIndex] > min)
                 break;
         }
+        
         if (k == r){
             printf("\nSaddle Point Found!\n");
             printf("Value = %d\n", min);
@@ -135,9 +139,11 @@ int main(){
             break;
         }
     }
+    
     if (!found){
         printf("\nNo Saddle Point exists in the matrix.\n");
     }
+    
     return 0;
 }
 
