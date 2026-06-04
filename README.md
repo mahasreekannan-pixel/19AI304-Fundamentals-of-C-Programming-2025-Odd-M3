@@ -315,9 +315,13 @@ Thus, the program was implemented and executed successfully, and the required ou
 int main()
 {
     char str[200];
+    
     char words[50][50];
+    
     int i, j, k = 0, w = 0;
+    
     scanf("%[^\n]s", str);
+    
     for (i = 0; str[i] != '\0'; i++)
     {
         if (str[i] == ' ')
