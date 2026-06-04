@@ -30,7 +30,8 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
     int decimal, binary[32];
     int i = 0;
     
