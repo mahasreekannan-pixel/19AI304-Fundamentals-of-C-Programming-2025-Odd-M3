@@ -33,6 +33,7 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 int main()
 {
     int decimal, binary[32];
+    
     int i = 0;
     
     scanf("%d", &decimal);
@@ -103,10 +104,15 @@ Thus, the program was implemented and executed successfully, and the required ou
 
 int main(){
     int a[10][10];
+    
     int r, c, i, j, k;
+    
     int min, colIndex;
+    
     int found = 0;
+    
     scanf("%d %d", &r, &c);
+    
     printf("Enter the matrix elements:\n");
     
     for (i = 0; i < r; i++){
@@ -190,15 +196,20 @@ Thus, the program was implemented and executed successfully, and the required ou
 int main(){
     char str[100];
     int i, length;
+    
     fgets(str, sizeof(str), stdin);
+    
     length = strlen(str);
+    
     if (str[length - 1] == '\n')
         str[length - 1] = '\0';
     length = strlen(str);
+    
     printf("Reversed string: ");
     for (i = length - 1; i >= 0; i--){
         printf("%c", str[i]);
     }
+    
     printf("\n");
     return 0;
 }
@@ -245,16 +256,19 @@ int main(){
     char str[200];
     int freq[256] = {0};
     int i;
+    
     fgets(str, sizeof(str), stdin);
     for (i = 0; str[i] != '\0'; i++){
         freq[(unsigned char)str[i]]++;
     }
+    
     printf("\nCharacter Frequency:\n");
     for (i = 0; i < 256; i++){
         if (freq[i] > 0 && i != '\n'){
             printf("'%c' : %d\n", i, freq[i]);
         }
     }
+    
     return 0;
 }
 
@@ -312,9 +326,11 @@ int main()
             w++;
             k = 0;
         }
+        
         else
         words[w][k++] = str[i];
     }
+    
     words[w][k] = '\0';
     w++;
     for (i = 0; i < w; i++)
@@ -328,11 +344,13 @@ int main()
             words[j][0] = '\0';
         }
     }
+    
     for (i = 0; i < w; i++)
     {
         if (words[i][0] != '\0')
         printf("%s ", words[i]);
     }
+    
     return 0;
 }
 
