@@ -33,7 +33,9 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 int main(){
     int decimal, binary[32];
     int i = 0;
+    
     scanf("%d", &decimal);
+    
     if (decimal == 0){
         printf("Binary equivalent: 0\n");
         return 0;
